@@ -2,15 +2,22 @@
 
 ---
 
+## 📋 Overview
+
+This project implements **TOPSIS (Technique for Order Preference by Similarity to Ideal Solution)** for Multi-Criteria Decision Making (MCDM).
+
+The solution is delivered in three formats:
+
+- Command Line Tool  
+- PyPI Package with CLI support  
+- Flask Web Service with Email functionality  
+
+---
+
 ## 1. Methodology
 
 Data Collection → Data Pre-Processing → Normalization → Weight Assignment → Ideal Best/Worst Calculation → Distance Computation → Score Calculation → Ranking
 
----
-
-## 📋 Overview
-
-TOPSIS ranks alternatives by measuring their closeness to the ideal best solution and distance from the ideal worst solution.
 
 ---
 
@@ -33,18 +40,37 @@ TOPSIS ranks alternatives by measuring their closeness to the ideal best solutio
 ### 📥 Input
 
 - Dataset file (.csv / .xlsx)
+- 
+Fund Name	P1	P2	P3	P4	P5
+M1	0.72	0.52	4.3	63	17.14
+M2	0.85	0.72	4.1	40.5	11.54
+M3	0.81	0.66	3.2	38.1	10.69
+M4	0.81	0.66	4.6	64	17.52
+M5	0.74	0.55	7	64.5	18.2
+M6	0.91	0.83	5.3	54.1	15.29
+M7	0.82	0.67	5.4	41	11.97
+M8	0.74	0.55	3.9	47.7	13.22
+
 - Weights (e.g., `1,1,1,1,2`)
 - Impacts (e.g., `+,+,-,+,+`)
 
+ 
+
 ### 📤 Output
 
-Generated file includes:
+Generated file includes (result.csv):
 
-| Alternative | Topsis Score | Rank |
-|-------------|--------------|------|
-| A1 | 0.5917 | 1 |
-| A2 | 0.5840 | 2 |
-| A3 | 0.4489 | 3 |
+Fund Name	P1	P2	P3	P4	P5	Topsis Score	Rank
+M1	0.72	0.52	4.3	63	17.14	0.593828911	3
+M2	0.85	0.72	4.1	40.5	11.54	0.500588932	6
+M3	0.81	0.66	3.2	38.1	10.69	0.515266887	4
+M4	0.81	0.66	4.6	64	17.52	0.679646753	1
+M5	0.74	0.55	7	64.5	18.2	0.43856876	7
+M6	0.91	0.83	5.3	54.1	15.29	0.599458847	2
+M7	0.82	0.67	5.4	41	11.97	0.348446927	8
+M8	0.74	0.55	3.9	47.7	13.22	0.502060287	5
+
+
 
 ✔ Highest score → Rank 1  
 ✖ Incorrect weights/impacts → Validation Error  
@@ -67,10 +93,10 @@ topsis data.csv "1,1,1,1,2" "+,+,-,+,+" result.csv
 
 The Flask Web App allows users to:
 
--Upload dataset
--Enter weights & impacts
--Provide email ID
--Receive ranked result via email
+- Upload dataset
+- Enter weights & impacts
+- Provide email ID
+- Receive ranked result via email
 
 Run locally:
 ```bash
@@ -96,12 +122,12 @@ Email output-
 
 ## 7. Technologies Used
 
--Python
--NumPy
--Pandas
--Flask
--Flask-Mail
--PyPI Packaging Tools
+- Python
+- NumPy
+- Pandas
+- Flask
+- Flask-Mail
+- PyPI Packaging Tools
 
 ---
 
