@@ -117,7 +117,8 @@ http://127.0.0.1:5000
 ## 6. Screenshot of the Interface
 
 User Interface-
-<img width="397" height="448" alt="image" src="https://github.com/user-attachments/assets/0cb30009-7b3b-4126-a9a6-c4925293a94d" />
+<img width="983" height="425" alt="image" src="https://github.com/user-attachments/assets/57617a5f-27ff-4e71-b70b-d440471196fa" />
+
 
 Email output-
 <img width="931" height="702" alt="image" src="https://github.com/user-attachments/assets/597638ac-7347-4a55-898d-ca4f125169cd" />
